@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web Experiment</title>
+</head>
+<body>
+    <div id="screen1" class='container' style="">
+        <form action="#" onsubmit="return subjectID()">
+            <h1>Please enter the subject ID</h1>
+            <input type="number" id='ID' required>
+            <br><br>
+            <button>Continue</button>
+        </form>
+    </div>
+    <div id="screen2" class="container" style="display: none">
+        <form action="#" onsubmit="return screen2()">
+            <h1>Instructions</h1>
+            <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+            <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+            <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+            <button>Continue</button>
+        </form>
+    </div>
+    <div id="screen3" class="container" style="display: none">
+        <form action="#" onsubmit="return screen3()" class='tree'>
+            <h1>Here is an example experiment</h1>
+            <div class="canvas">
+                <span class='DN' id='dn1'><p>DN1</p></span>
+                <span class='line left' id='left1'></span>
+                <span class='line right' id='right1'></span>
+                <span class='CN' id='cn1'><p>CN1</p></span>
+                <span class='ON' id='on1'><p>ON1</p></span>
+                <span class='line left' id='left2'></span>
+                <span class='line right' id='right2'></span>
+                <span class='DN' id='dn2a'><p>DN2a</p></span>
+                <span class='line left' id='left3'></span>
+                <span class='line right' id='right3'></span>
+                <span class='CN' id='cn2a'><p>CN2a</p></span>
+                <span class='line left' id='left4'></span>
+                <span class='line right' id='right4'></span>
+                <span class='ON' id='on2'><p>ON2</p></span>
+                <span class='ON' id='on3'><p>ON3</p></span>
+
+                <span class='CN' id='cn2b'><p>CN2b</p></span>
+                <span class='line left' id='left5'></span>
+                <span class='line right' id='right5'></span>
+                <span class='ON' id='on4'><p>ON4</p></span>
+                <span class='ON' id='on5'><p>ON5</p></span>
+
+                <span class='DN' id='dn2b'><p>DN2b</p></span>
+                <span class='line left' id='left6'></span>
+                <span class='line right' id='right6'></span>
+                <span class='CN' id='cn2c'><p>CN2c</p></span>
+                <span class='line left' id='left7'></span>
+                <span class='line right' id='right7'></span>
+                <span class='ON' id='on6'><p>ON6</p></span>
+                <span class='ON' id='on7'><p>ON7</p></span>
+
+                <span class='CN' id='cn2d'><p>CN2d</p></span>
+                <span class='line left' id='left8'></span>
+                <span class='line right' id='right8'></span>
+                <span class='ON' id='on8'><p>ON8</p></span>
+                <span class='ON' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>More Instructions</h1>
+                    <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen4" class="container" style="display: none">
+        <form action="#" onsubmit="return screen4()" class='tree'>
+            <h1>Here is an example experiment</h1>
+            <div class="canvas">
+                <span class='DN' id='dn1'><p>DN1</p></span>
+                <span class='line left' id='left1'></span>
+                <span class='line right' id='right1'></span>
+                <span class='CN' id='cn1'><p>CN1</p></span>
+                <span class='ON' id='on1'><p>ON1</p></span>
+                <span class='line left' id='left2'></span>
+                <span class='line right' id='right2'></span>
+                <span class='DN' id='dn2a'><p>DN2a</p></span>
+                <span class='line left' id='left3'></span>
+                <span class='line right' id='right3'></span>
+                <span class='CN' id='cn2a'><p>CN2a</p></span>
+                <span class='line left' id='left4'></span>
+                <span class='line right' id='right4'></span>
+                <span class='ON' id='on2'><p>ON2</p></span>
+                <span class='ON' id='on3'><p>ON3</p></span>
+
+                <span class='CN' id='cn2b'><p>CN2b</p></span>
+                <span class='line left' id='left5'></span>
+                <span class='line right' id='right5'></span>
+                <span class='ON' id='on4'><p>ON4</p></span>
+                <span class='ON' id='on5'><p>ON5</p></span>
+
+                <span class='DN' id='dn2b'><p>DN2b</p></span>
+                <span class='line left' id='left6'></span>
+                <span class='line right' id='right6'></span>
+                <span class='CN' id='cn2c'><p>CN2c</p></span>
+                <span class='line left' id='left7'></span>
+                <span class='line right' id='right7'></span>
+                <span class='ON' id='on6'><p>ON6</p></span>
+                <span class='ON' id='on7'><p>ON7</p></span>
+
+                <span class='CN' id='cn2d'><p>CN2d</p></span>
+                <span class='line left' id='left8'></span>
+                <span class='line right' id='right8'></span>
+                <span class='ON' id='on8'><p>ON8</p></span>
+                <span class='ON' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>More Instructions</h1>
+                    <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen5" class="container" style="display: none">
+        <form action="#" onsubmit="return screen5()" class='tree'>
+            <h1>Here is an example experiment</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Practice Test 1</h1>
+                    <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen6" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen6()" class='tree'>
+            <h1>Here is the first trial experiment</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Practice Test 2</h1>
+                    <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen7" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen7()" class='tree'>
+            <h1>Here is the second trial experiment</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Practice Test 2</h1>
+                    <p>The next page should show the decision tree for the first practice trial and have on the side something like "here is an example of a decision tree" and more placeholder text so I can explain how one gets through an experiment like that. Make sure that the decision tree on this page is not able to be interacted with. Make it so that the user will need to press spacebar to get to the next page after reading the instructions.</p>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen8" class='container' style="display: none">
+        <form action="#" onsubmit="return screen8()">
+            <h1>You have completed the practice trials.</h1>
+            <h2>Proceed to actual trial</h2>
+            <button>Continue</button>
+        </form>
+    </div>
+    <div id="screen9" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen9()" class='tree'>
+            <h1>Here is the first trial</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Trial 1</h1>
+                    <p class='money'></p>
+                    <br>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen10" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen10()" class='tree'>
+            <h1>Here is the second trial</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Trial 2</h1>
+                    <p class='money'></p>
+                    <br>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen11" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen11()" class='tree'>
+            <h1>Here is the third trial</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Trial 3</h1>
+                    <p class='money'></p>
+                    <br>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen12" class="container reactive" style="display: none">
+        <form action="#" onsubmit="return screen12()" class='tree'>
+            <h1>Here is the fourth trial</h1>
+            <div class="canvas">
+                <div class='DN dn1 chosen' id='dn1'><p>DN1</p></div>
+                <span class='line left active left1' id='left1'></span>
+                <span class='line right active right1' id='right1'></span>
+                <span class='CN active cn1' id='cn1' onclick='cn1()'><p>CN1</p></span>
+                <span class='ON active on1' id='on1' onclick='on1()'><p>ON1</p></span>
+                <span class='line left left2' id='left2'></span>
+                <span class='line right right2' id='right2'></span>
+                <span class='DN dn2a' id='dn2a' ><p>DN2a</p></span>
+                <span class='line left left3' id='left3'></span>
+                <span class='line right right3' id='right3'></span>
+                <span class='CN cn2a' id='cn2a' onclick='cn2a()'><p>CN2a</p></span>
+                <span class='line left left4' id='left4'></span>
+                <span class='line right right4' id='right4'></span>
+                <span class='ON on2' id='on2'><p>ON2</p></span>
+                <span class='ON on3' id='on3'><p>ON3</p></span>
+
+                <span class='CN cn2b' id='cn2b' onclick='cn2b()'><p>CN2b</p></span>
+                <span class='line left left5' id='left5'></span>
+                <span class='line right right5' id='right5'></span>
+                <span class='ON on4' id='on4'><p>ON4</p></span>
+                <span class='ON on5' id='on5'><p>ON5</p></span>
+
+                <span class='DN dn2b' id='dn2b'><p>DN2b</p></span>
+                <span class='line left left6' id='left6'></span>
+                <span class='line right right6' id='right6'></span>
+                <span class='CN cn2c' id='cn2c' onclick='cn2c()'><p>CN2c</p></span>
+                <span class='line left left7' id='left7'></span>
+                <span class='line right right7' id='right7'></span>
+                <span class='ON on6' id='on6'><p>ON6</p></span>
+                <span class='ON on7' id='on7'><p>ON7</p></span>
+
+                <span class='CN cn2d' id='cn2d' onclick='cn2d()'><p>CN2d</p></span>
+                <span class='line left left8' id='left8'></span>
+                <span class='line right right8' id='right8'></span>
+                <span class='ON on8' id='on8'><p>ON8</p></span>
+                <span class='ON on9' id='on9'><p>ON9</p></span>
+                <div class="ins">
+                    <h1>Trial 4</h1>
+                    <p class='money'></p>
+                    <br>
+                    <button>Continue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="screen13" class='container' style="display: none">
+        <form action="#" onsubmit="return downloadCSV()">
+            <h1>You have completed the trials.</h1>
+            <h2>Proceed to actual trial</h2>
+            
+            <button>Download Results</button>
+        </form>
+    </div>
+    <script src="decision_tree.js"></script>
+    </body>
+</html>

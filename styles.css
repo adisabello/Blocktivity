@@ -1,0 +1,260 @@
+.container{
+    width: 100%;
+}
+.container p,
+.container input,
+.container button,
+.container h1{
+    text-align: center;
+    margin: 7px auto;
+}
+form{
+    width: 70%;
+    margin: 10px auto;
+}
+.form button{
+    text-align: center;
+}
+.DN,.CN,.ON{
+    display: block;
+    width: 80px;
+    height: 80px;
+    color: black;
+    margin: 10px;
+    position: absolute;
+}
+.DN p,.CN p,.ON p{
+    padding-top: 30px;
+}
+.DN{
+    background-color: aquamarine;
+}
+.CN{
+    border-radius: 50%;
+}
+.CN{
+    background-color: orange;
+}
+.ON{
+    transform: rotate(45deg);
+    color: white;
+    background-color: black;
+    width: 65px;
+    height: 65px;
+}
+.ON p{
+    transform: rotate(-45deg);
+    padding-top: 20px;
+    margin-left: -20px;
+}
+.line{
+    display: block;
+    border: solid 1px black;
+    width: 0px;
+    height: 150px;
+    position: absolute;
+}
+.right{
+    transform: rotate(70deg);
+}
+.left{
+    transform: rotate(110deg);
+}
+#dn1{
+    top: 10px;
+    left: 500px;
+}
+.canvas{
+    position: relative;
+}
+#right1{
+    top: 50px;
+    left: 480px;
+}
+#left1{
+    top: 50px;
+    left: 620px;
+}
+#on1{
+    top: 150px;
+    left: 650px;
+}
+#cn1{
+    top: 140px;
+    left: 350px;
+}
+#left2{
+    top: 180px;
+    left: 470px;
+}
+#right2{
+    top: 180px;
+    left: 330px;
+}
+/* Here */
+#dn2a{
+    top: 270px;
+    left: 200px;
+}
+form{
+    text-align: center;
+}
+#right3{
+    height: 100px;
+    transform: rotate(60deg);
+    top: 335px;
+    left: 200px;
+}
+#left3{
+    height: 100px;
+    transform: rotate(120deg);
+    top: 335px;
+    left: 285px;
+}
+#cn2a{
+    top: 400px;
+    left: 100px;
+}
+#left4{
+    top: 480px;
+    transform: rotate(150deg);
+    height: 100px;
+    left: 170px;
+}
+#right4{
+    top: 480px;
+    transform: rotate(30deg);
+    height: 100px;
+    left: 120px;
+}
+#on2{
+    top: 570px;
+    left: 55px;
+}
+#on3{
+    top: 570px;
+    left: 150px;
+}
+#cn2b{
+    top: 400px;
+    left: 290px;
+}
+#left5{
+    top: 480px;
+    transform: rotate(150deg);
+    height: 100px;
+    left: 360px;
+}
+#right5{
+    top: 480px;
+    transform: rotate(30deg);
+    height: 100px;
+    left: 310px;
+}
+#on4{
+    top: 570px;
+    left: 245px;
+}
+#on5{
+    top: 570px;
+    left: 340px;
+}
+
+#dn2b{
+    top: 270px;
+    left: 530px;
+}
+#right6{
+    height: 100px;
+    transform: rotate(60deg);
+    top: 335px;
+    left: 550px;
+}
+#left6{
+    height: 110px;
+    transform: rotate(120deg);
+    top: 335px;
+    left: 635px;
+}
+#cn2c{
+    top: 400px;
+    left: 465px;
+}
+#left7{
+    top: 480px;
+    transform: rotate(160deg);
+    height: 110px;
+    left: 530px;
+}
+#right7{
+    top: 480px;
+    transform: rotate(20deg);
+    height: 100px;
+    left: 495px;
+}
+#on6{
+    top: 570px;
+    left: 435px;
+}
+#on7{
+    top: 570px;
+    left: 530px;
+}
+#cn2d{
+    top: 400px;
+    left: 655px;
+}
+#left8{
+    top: 480px;
+    transform: rotate(150deg);
+    height: 100px;
+    left: 740px;
+}
+#right8{
+    top: 480px;
+    transform: rotate(30deg);
+    height: 100px;
+    left: 690px;
+}
+#on8{
+    top: 570px;
+    left: 625px;
+}
+#on9{
+    top: 570px;
+    left: 720px;
+}
+#screen1 form, #screen2 form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#screen1 form input{
+    width: 50%;
+    margin: 10px 200px;
+}
+.ins{
+    width: 250px;
+    padding: 10px 20px;
+    position: absolute;
+    right: -150px;
+}
+.reactive .chosen{
+    border: solid 5px green !important;
+}
+.reactive .active{
+    border: solid 5px blue !important;
+    cursor: pointer;
+}
+.reactive .line.active{
+    background-color: blue;
+    border: solid 2px blue !important;
+}
+.reactive .line.chosen{
+    background-color: green;
+    border: solid 2px green !important;
+}
+.tree button{
+    /* position: absolute;
+    top: 600px; */
+}
