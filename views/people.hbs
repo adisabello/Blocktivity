@@ -1,0 +1,54 @@
+<ul>
+    <li><a href="/people">Members</a></li>
+    <li><a href="/teams">Teams</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+<div>
+    <h2>Add New Member</h2>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" id='fname' required></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><input type="text" id='lname' required></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" id='email' required></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td><select name="gender" id="gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><input type="number" id='age' required></td>
+        </tr>
+        <tr><td><button onclick='addMember()'>Add Member</button></td></tr>
+    </table>
+</div>
+<h2>Members</h2>
+<table class='people'>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Age</th>
+    </tr>
+{{#each people}}
+    <tr>
+        <td>{{this.dataValues.firstName}}&nbsp;{{this.dataValues.lastName}}</td>
+        <td>{{this.dataValues.email}}</td>
+        <td>{{this.dataValues.gender}}</td>
+        <td>{{this.dataValues.age}}</td>
+        <td>
+            <button onclick="deletePerson({{this.dataValues.id}})">Delete</button>
+        </td>
+    </tr>
+{{/each}}
+</table>
